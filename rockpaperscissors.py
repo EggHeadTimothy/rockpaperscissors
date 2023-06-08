@@ -198,6 +198,7 @@ def computer_move():
     :return: Returns the computer's selection in the form of a string.
     '''
     x = random.randint(1,3)
+    # change the number 100 to increase or decrease the chances of "bomb"
     b = random.randint(1,100)
     if b == 100:
         return 'bomb'
@@ -262,6 +263,7 @@ def __main__():
             player1 = player_move()
             print('Player 2, please enter your move.')
             player2 = player_move()
+        # change the number 100 to increase or decrease the chances of reverse results
         rev = random.randint(1,100)
         if rev == 100:
             reverse_rps_winner(player1, player2)
